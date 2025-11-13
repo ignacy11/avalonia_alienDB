@@ -14,7 +14,14 @@
              to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
         <vm:MainWindowViewModel/>
     </Design.DataContext>
-
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
+    
+    <!-- ekran główny, ekran szczegółowy, ekran postaci -->
+    <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Vertical">
+            <TextBlock Text="Alien Universe Database"/>
+            <ListBox ItemsSource="{Binding Movies}" SelectedItem="{Binding }">
+                <!-- TODO: populate ListBox with data from binding -->
+            </ListBox>
+        </StackPanel>   
+    </StackPanel>
 </Window>
