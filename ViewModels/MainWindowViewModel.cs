@@ -1,5 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using avalonia_alienDB.Models;
+using ReactiveUI.Fody.Helpers;
 
 namespace avalonia_alienDB.ViewModels;
 
@@ -102,4 +103,5 @@ public class MainWindowViewModel : ViewModelBase
             FunFact = "Film pierwotnie miał być zatytułowany „Paradise Lost”, a reżyser planował jeszcze jedną część łączącą fabułę z oryginalnym „Obcym” z 1979 roku."
         }
     };
+    [Reactive] public MovieModel SelectedMovie { get; set; }
 }
