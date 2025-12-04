@@ -10,8 +10,8 @@ public class MainWindowViewModel : ViewModelBase
     {
         new MovieModel
         {
-            Title = "Alien",
-            TranslatedTitle = "Obcy – ósmy pasażer Nostromo",
+            MovieTitle = "Alien",
+            TranslatedMovieTitle = "Obcy – ósmy pasażer Nostromo",
             ReleaseYear = 1979,
             Director = "Ridley Scott",
             Screenplay = "Dan O'Bannon",
@@ -25,8 +25,8 @@ public class MainWindowViewModel : ViewModelBase
         },
         new MovieModel
         {
-            Title = "Aliens",
-            TranslatedTitle = "Obcy – decydujące starcie",
+            MovieTitle = "Aliens",
+            TranslatedMovieTitle = "Obcy – decydujące starcie",
             ReleaseYear = 1986,
             Director = "James Cameron",
             Screenplay = "James Cameron, David Giler, Walter Hill",
@@ -40,8 +40,8 @@ public class MainWindowViewModel : ViewModelBase
         },
         new MovieModel
         {
-            Title = "Alien³",
-            TranslatedTitle = "Obcy³",
+            MovieTitle = "Alien³",
+            TranslatedMovieTitle = "Obcy³",
             ReleaseYear = 1992,
             Director = "David Fincher",
             Screenplay = "David Giler, Walter Hill, Larry Ferguson",
@@ -57,8 +57,8 @@ public class MainWindowViewModel : ViewModelBase
         },
         new MovieModel
         {
-            Title = "Alien: Resurrection",
-            TranslatedTitle = "Obcy: Przebudzenie",
+            MovieTitle = "Alien: Resurrection",
+            TranslatedMovieTitle = "Obcy: Przebudzenie",
             ReleaseYear = 1997,
             Director = "Jean-Pierre Jeunet",
             Screenplay = "Joss Whedon",
@@ -74,8 +74,8 @@ public class MainWindowViewModel : ViewModelBase
         },
         new MovieModel
         {
-            Title = "Prometheus",
-            TranslatedTitle = "Prometeusz",
+            MovieTitle = "Prometheus",
+            TranslatedMovieTitle = "Prometeusz",
             ReleaseYear = 2012,
             Director = "Ridley Scott",
             Screenplay = "Jon Spaihts, Damon Lindelof",
@@ -89,8 +89,8 @@ public class MainWindowViewModel : ViewModelBase
         },
         new MovieModel
         {
-            Title = "Alien: Covenant",
-            TranslatedTitle = "Obcy: Przymierze",
+            MovieTitle = "Alien: Covenant",
+            TranslatedMovieTitle = "Obcy: Przymierze",
             ReleaseYear = 2017,
             Director = "Ridley Scott",
             Screenplay = "John Logan, Dante Harper",

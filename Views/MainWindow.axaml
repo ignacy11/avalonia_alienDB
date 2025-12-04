@@ -7,7 +7,9 @@
         x:Class="avalonia_alienDB.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
-        Title="avalonia_alienDB">
+        Title="avalonia_alienDB"
+        Background="LightPink"
+        >
 
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
@@ -16,18 +18,26 @@
     </Design.DataContext>
     
     <!-- ekran główny, ekran szczegółowy, ekran postaci -->
-    <StackPanel Orientation="Vertical">
-        <StackPanel Orientation="Vertical">
-            <TextBlock Text="Alien Universe Database"/>
-            <ListBox ItemsSource="{Binding Movies}" SelectedItem="{Binding SelectedMovie}">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Orientation="Vertical">
-                            <TextBlock Text="{Binding FunFact}"/>
-                        </StackPanel>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
-        </StackPanel>   
+    <StackPanel Orientation="Horizontal">
+        <Grid>
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="Alien Universe Database" />
+                <ListBox ItemsSource="{Binding Movies}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding MovieTitle}" />
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <Button>Ekran szczegółowy</Button>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button>Ekran postaci</Button>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
     </StackPanel>
 </Window>
