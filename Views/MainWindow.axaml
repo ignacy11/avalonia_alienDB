@@ -16,71 +16,97 @@
         <vm:MainWindowViewModel />
     </Design.DataContext>
 
-    <!-- ekran główny, ekran szczegółowy, ekran postaci -->
-    <Grid RowDefinitions="2* 8*" ColumnDefinitions="*">
-        <Grid Grid.Row="0"
-              ColumnDefinitions="7* 3*" RowDefinitions="*">
-            <TextBlock
-                Text="Alien Universe Database"
-                Foreground="#fafafa"
-                FontSize="26"
-                TextAlignment="Center"
-                Margin="0 20"
-                VerticalAlignment="Center"
-                HorizontalAlignment="Center"
-                />
-            <Grid Grid.Column="1"
-                  VerticalAlignment="Center"
-                  HorizontalAlignment="Center"
-                  >
-                <!-- TODO: center image -->
-                <Image
-                    Source="/Assets/alien.png"
-                    Stretch="Uniform"
-                />
+    <Grid RowDefinitions="4* 6*" ColumnDefinitions="*">
+        <Border Grid.Row="0"
+            BorderBrush="#eba0ac"
+            BorderThickness="0 0 0 3"
+            >
+            <Grid
+                ColumnDefinitions="6* 4*" RowDefinitions="*"
+                  Background="#11111b">
+                <TextBlock
+                    Grid.Column="0"
+                    Text="Alien Universe Database"
+                    Foreground="#fafafa"
+                    FontSize="30"
+                    TextAlignment="Center"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    />
+                    <Image Grid.Column="1"
+                        Source="/Assets/alien.png"
+                        Width="354"
+                        Height="200"
+                        Stretch="Uniform"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        />
             </Grid>
-        </Grid>
+        </Border>
         <Grid Grid.Row="1"
               RowDefinitions="*" ColumnDefinitions="*, *"
               HorizontalAlignment="Center"
               ColumnSpacing="150"
               >
-            <ListBox Grid.Column="0"
-                     VerticalAlignment="Center"
-                     ItemsSource="{Binding Movies}"
-                     MinWidth="350"
-                     MinHeight="250"
-                     >
+            <ListBox
+                VerticalAlignment="Center"
+                ItemsSource="{Binding Movies}"
+                Width="400"
+                Background="#11111b">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <TextBlock Text="{Binding MovieTitle}" />
+                        <Grid RowDefinitions="*" ColumnDefinitions="*">
+                            <Border
+                                Height="40"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Stretch">
+                                <TextBlock
+                                    Text="{Binding MovieTitle}"
+                                    Foreground="#fafafa"
+                                    VerticalAlignment="Center"
+                                    Padding="10 0 0 0"
+                                    />
+                            </Border>
+                        </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
             <Grid Grid.Column="1"
                   RowDefinitions="*, *, *" ColumnDefinitions="*"
                   VerticalAlignment="Center"
-                  RowSpacing="25"
+                  RowSpacing="40"
                   >
                     <Button Grid.Row="0"
                         Background="#11111b"
                         Foreground="#fafafa"
-                        Width="155"
-                        HorizontalContentAlignment="Center">
+                        Width="250"
+                        Height="45"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        FontSize="22"
+                        >
                         Ekran główny
                     </Button>
                     <Button Grid.Row="1"
                             Background="#11111b"
                             Foreground="#fafafa"
-                            Width="155"
-                            HorizontalContentAlignment="Center">
+                            Width="250"
+                            Height="45"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            FontSize="22"
+                            >
                         Ekran szczegółowy
                     </Button>
                     <Button Grid.Row="2"
                             Background="#11111b"
                             Foreground="#fafafa"
-                            Width="155"
-                            HorizontalContentAlignment="Center">
+                            Width="250"
+                            Height="45"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            FontSize="22"
+                            >
                         Ekran postaci
                     </Button>
             </Grid>
