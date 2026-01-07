@@ -107,19 +107,6 @@ public class MainWindowViewModel : ViewModelBase
             FunFact = "Film pierwotnie miał być zatytułowany „Paradise Lost”, a reżyser planował jeszcze jedną część łączącą fabułę z oryginalnym „Obcym” z 1979 roku."
         }
     };
-    /*[Reactive] public MovieModel SelectedMovie { get; set; }
-    
-    public Interaction<MovieViewModel, Unit> ShowDetailsWindow { get; }
-    public ReactiveCommand<MovieModel, Unit> ShowDetailsCommand { get; }
-    
-    public MainWindowViewModel()
-    {
-        ShowDetailsWindow = new Interaction<MovieViewModel, Unit>();
-        ShowDetailsCommand = ReactiveCommand.CreateFromTask<MovieModel>(async movie =>
-        {
-            await ShowDetailsWindow.Handle(movie);
-        });
-    }*/
     
     [Reactive] public MovieModel SelectedMovie { get; set; }
     
