@@ -45,7 +45,7 @@
             </Grid>
         </Border>
         <Grid Grid.Row="1"
-              RowDefinitions="*" ColumnDefinitions="*, *"
+              RowDefinitions="*" ColumnDefinitions="2*, *"
               HorizontalAlignment="Center"
               ColumnSpacing="150"
               >
@@ -92,14 +92,22 @@
                   VerticalAlignment="Center"
                   RowSpacing="40"
                   >
-                <TextBlock
-                    Text="{Binding}"
-                    MaxWidth="400"
-                    TextAlignment="Left"
-                    FontSize="16"
-                    Foreground="#fafafa"
-                    TextWrapping="Wrap"
+                <Border
+                    BorderBrush="#8c8fa1"
+                    BorderThickness="5"
+                    CornerRadius="5"
+                    >
+                    <TextBlock
+                        Text="Wybierz film z listy, aby zobaczyć szczegóły o nim."
+                        MaxWidth="400"
+                        TextAlignment="Center"
+                        FontSize="24"
+                        Foreground="#fafafa"
+                        Background="#1A1A2A"
+                        TextWrapping="Wrap"
+                        Padding="12"
                     />
+                </Border>
             </Grid>
         </Grid>
     </Grid>

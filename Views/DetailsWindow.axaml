@@ -9,56 +9,196 @@
     Title="DetailsWindow"
     Background="#1E1E2E"
     >
-    <Border
-        BorderBrush="#eba0ac"
-        BorderThickness="2"
-        CornerRadius="5">
-        <Grid
-            RowDefinitions="*, *, *, *, *, *, *, *, *, *, *"
-            ColumnDefinitions="*"
+    <Grid ColumnDefinitions="*, 6*, *" RowDefinitions="*, 9*, *">
+        <Border Grid.Row="1" Grid.Column="1"
+            BorderBrush="#eba0ac"
+            BorderThickness="2"
+            CornerRadius="5"
             >
-            <TextBlock Grid.Row="0"
-                       Text="{Binding MovieTitle, StringFormat=Tytuł: {0}}"
-                       FontSize="18"
-                       />
-            <TextBlock Grid.Row="1"
-                       Text="{Binding TranslatedMovieTitle, StringFormat=Polski tytuł: {0}}"
-                       FontSize="18"
-                       />
-            <TextBlock Grid.Row="2"
-                       Text="{Binding MovieDescription, StringFormat=Opis: {0}}"
-                       FontSize="18"
-                       />
-            <TextBlock Grid.Row="3"
-                       Text="{Binding ReleaseYear, StringFormat=Rok premiery: {0}}"
-                       FontSize="18"
-                       />
-            <TextBlock Grid.Row="4"
-                       Text="{Binding Director, StringFormat=Reżyser: {0}}"
-                       FontSize="18"
-                       />
-            <TextBlock Grid.Row="5"
-                       Text="{Binding Screenplay, StringFormat=Scenariusz: {0}}"
-                       FontSize="18"
-                       />
-            <TextBlock Grid.Row="6"
-                       Text="{Binding Genre, StringFormat=Gatunek: {0}}"
-                       />
-            <TextBlock Grid.Row="7"
-                       Text="{Binding RunningTime, StringFormat=Czas trwania: {0}}"
-                       FontSize="18"
-                       />
-            <TextBlock Grid.Row="8"
-                       Text="{Binding Rating, StringFormat=Ocena: {0}}"
-                       FontSize="18"
-                       />
-            <TextBlock Grid.Row="9"
-                       Text="{Binding MainCharacters, StringFormat=Postacie (TODO): {0}}"
-                       />
-            <TextBlock Grid.Row="10"
-                       Text="{Binding FunFact, StringFormat=Ciekawostka: {0}}"
-                       FontSize="18"
-                       />
-        </Grid>
-    </Border>
+            <Grid
+                RowDefinitions="*, *, Auto, *, *, *, *, *, *, *, Auto"
+                ColumnDefinitions="*, 4*"
+                >
+                <Border Grid.Row="0" Grid.Column="0" BorderBrush="#eba0ac" BorderThickness="2">
+                    <TextBlock
+                        Text="Tytuł:"
+                        FontWeight="Bold"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        />
+                </Border>
+                <Border Grid.Row="0" Grid.Column="1" BorderBrush="#eba0ac" BorderThickness="2">
+                    <TextBlock
+                        Text="{Binding MovieTitle}"
+                        FontSize="18"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        />
+                </Border>
+                <Border Grid.Row="1" Grid.Column="0" BorderBrush="#eba0ac" BorderThickness="2">
+                    <TextBlock
+                        Text="Polski tytuł:"
+                        FontWeight="Bold"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        />
+                </Border>
+                <Border Grid.Row="1" Grid.Column="1" BorderBrush="#eba0ac" BorderThickness="2">
+                    <TextBlock
+                        Text="{Binding TranslatedMovieTitle}"
+                        FontSize="18"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        />
+                </Border>
+                <Border Grid.Row="2" Grid.Column="0" BorderBrush="#eba0ac" BorderThickness="2">
+                    <TextBlock
+                        Text="Opis:"
+                        FontWeight="Bold"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        />
+                </Border>
+                <Border Grid.Row="2" Grid.Column="1" BorderBrush="#eba0ac" BorderThickness="2">
+                    <TextBlock
+                        Text="{Binding MovieDescription}"
+                        FontSize="18"
+                        TextWrapping="Wrap"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Margin="8"
+                        />
+                </Border>
+                <Border Grid.Row="3" Grid.Column="0" BorderBrush="#eba0ac" BorderThickness="2">
+                    <TextBlock
+                        Text="Rok premiery:"
+                        FontWeight="Bold"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        />
+                </Border>
+                <Border Grid.Row="3" Grid.Column="1" BorderBrush="#eba0ac" BorderThickness="2">
+                    <TextBlock
+                        Text="{Binding ReleaseYear}"
+                        FontSize="18"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        />
+                </Border>
+                <Border Grid.Row="4" Grid.Column="0" BorderBrush="#eba0ac" BorderThickness="2">
+                    <TextBlock
+                        Text="Reżyser:"
+                        FontWeight="Bold"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        />
+                </Border>
+                <Border Grid.Row="4" Grid.Column="1" BorderBrush="#eba0ac" BorderThickness="2">
+                    <TextBlock
+                        Text="{Binding Director}"
+                        FontSize="18"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        />
+                </Border>
+                <Border Grid.Row="5" Grid.Column="0" BorderBrush="#eba0ac" BorderThickness="2">
+                    <TextBlock
+                        Text="Scenariusz:"
+                        FontWeight="Bold"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        />
+                </Border>
+                <Border Grid.Row="5" Grid.Column="1" BorderBrush="#eba0ac" BorderThickness="2">
+                    <TextBlock
+                        Text="{Binding Screenplay}"
+                        FontSize="18"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        />
+                </Border>
+                <Border Grid.Row="6" Grid.Column="0" BorderBrush="#eba0ac" BorderThickness="2">
+                    <TextBlock
+                        Text="Gatunek:"
+                        FontWeight="Bold"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        />
+                </Border>
+                <Border Grid.Row="6" Grid.Column="1" BorderBrush="#eba0ac" BorderThickness="2">
+                    <TextBlock
+                        Text="{Binding Genre}"
+                        FontSize="18"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        />
+                </Border>
+                <Border Grid.Row="7" Grid.Column="0" BorderBrush="#eba0ac" BorderThickness="2">
+                    <TextBlock
+                        Text="Czas trwania:"
+                        FontWeight="Bold"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        />
+                </Border>
+                <Border Grid.Row="7" Grid.Column="1" BorderBrush="#eba0ac" BorderThickness="2">
+                    <TextBlock
+                        Text="{Binding RunningTime}"
+                        FontSize="18"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        />
+                </Border>
+                <Border Grid.Row="8" Grid.Column="0" BorderBrush="#eba0ac" BorderThickness="2">
+                    <TextBlock
+                        Text="Ocena:"
+                        FontWeight="Bold"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        />
+                </Border>
+                <Border Grid.Row="8" Grid.Column="1" BorderBrush="#eba0ac" BorderThickness="2">
+                    <TextBlock
+                        Text="{Binding Rating}"
+                        FontSize="18"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        />
+                </Border>
+                <Border Grid.Row="9" Grid.Column="0" BorderBrush="#eba0ac" BorderThickness="2">
+                    <TextBlock
+                        Text="Postacie (TODO):"
+                        FontWeight="Bold"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        />
+                </Border>
+                <Border Grid.Row="9" Grid.Column="1" BorderBrush="#eba0ac" BorderThickness="2">
+                    <Button
+                        Content="Pokaż postacie"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        />
+                </Border>
+                <Border Grid.Row="10" Grid.Column="0" BorderBrush="#eba0ac" BorderThickness="2">
+                    <TextBlock
+                        Text="Ciekawostka:"
+                        FontWeight="Bold"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        />
+                </Border>
+                <Border Grid.Row="10" Grid.Column="1" BorderBrush="#eba0ac" BorderThickness="2">
+                    <TextBlock
+                        Text="{Binding FunFact}"
+                        FontSize="18"
+                        TextWrapping="Wrap"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Margin="8"
+                        />
+                </Border>
+            </Grid>
+        </Border>
+    </Grid>
 </Window>
