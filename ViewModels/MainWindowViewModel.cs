@@ -1,5 +1,9 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
+using System.Reactive;
+using System.Reactive.Linq;
 using avalonia_alienDB.Models;
+using ReactiveUI;
 using ReactiveUI.Fody.Helpers;
 
 namespace avalonia_alienDB.ViewModels;
@@ -103,5 +107,32 @@ public class MainWindowViewModel : ViewModelBase
             FunFact = "Film pierwotnie miał być zatytułowany „Paradise Lost”, a reżyser planował jeszcze jedną część łączącą fabułę z oryginalnym „Obcym” z 1979 roku."
         }
     };
+    /*[Reactive] public MovieModel SelectedMovie { get; set; }
+    
+    public Interaction<MovieViewModel, Unit> ShowDetailsWindow { get; }
+    public ReactiveCommand<MovieModel, Unit> ShowDetailsCommand { get; }
+    
+    public MainWindowViewModel()
+    {
+        ShowDetailsWindow = new Interaction<MovieViewModel, Unit>();
+        ShowDetailsCommand = ReactiveCommand.CreateFromTask<MovieModel>(async movie =>
+        {
+            await ShowDetailsWindow.Handle(movie);
+        });
+    }*/
+    
     [Reactive] public MovieModel SelectedMovie { get; set; }
+    
+    public Interaction<MovieModel, Unit> ShowDetailsWindow { get; }
+    public ReactiveCommand<MovieModel, Unit> ShowDetailsCommand { get; }
+    
+    public MainWindowViewModel()
+    {
+        ShowDetailsWindow = new Interaction<MovieModel, Unit>();
+        ShowDetailsCommand = ReactiveCommand.CreateFromTask<MovieModel>(async movie =>
+        {
+            await ShowDetailsWindow.Handle(movie);
+        });
+    }
+
 }
